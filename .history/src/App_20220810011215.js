@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import TopBar from "./components/TopBar";
-import FooterMenu from "./components/FooterMenu";
-import Content from "./components/Content";
+import TopBar from "./src/components/TopBar.js";
+import FooterMenu from "./src/components/FooterMenu";
+import Content from "./src/components/Content";
 
 class App extends Component {
   constructor(props) {
