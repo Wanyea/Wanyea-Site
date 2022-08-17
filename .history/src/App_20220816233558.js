@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import TopBar from "./components/TopBar";
 import FooterMenu from "./components/FooterMenu";
 import Content from "./components/Content";
-import Sidebar from "./components/Sidebar";
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +10,6 @@ class App extends Component {
       windowWidth: 0,
       windowHeight: 0
     };
-
     this.updateDimensions = this.updateDimensions.bind(this);
   }
 
@@ -30,22 +28,20 @@ class App extends Component {
 
     this.setState({ windowWidth, windowHeight });
   }
-
+  
   render() {
     const { windowWidth } = this.state;
-
-    const sidebarCollapsed = windowWidth < 1100;
 
     const styles = {
       white: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
       black: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
       topBarHeight: 40,
       footerMenuHeight: 50,
-      showFooterMenuText: windowWidth > 500,
-      showSidebar: windowWidth > 768,
-      sidebarCollapsed,
-      sidebarWidth: sidebarCollapsed ? 50 : 150
+      
+      // show footer menu text when window is wide enough
+      showFooterMenuText: windowWidth > 500
     };
+   
 
     const menuItems = [
       { icon: `😀`, text: "Item 1" },
@@ -55,11 +51,6 @@ class App extends Component {
       { icon: `😛`, text: "Item 5" }
     ];
 
-    if (styles.showSidebar) {
-      menuItems.push({ icon: `😺️`, text: "Profile" });
-      menuItems.push({ icon: `⚙`, text: "Settings" });
-    }
-
     return (
       <div
         style={{
@@ -68,17 +59,9 @@ class App extends Component {
           position: "relative"
         }}
       >
-        {styles.showSidebar ? (
-          <Sidebar menuItems={menuItems} styles={styles} />
-        ) : (
-          <TopBar styles={styles} />
-        )}
-
+        <TopBar styles={styles} />
         <Content styles={styles} />
-
-        {!styles.showSidebar && (
-          <FooterMenu menuItems={menuItems} styles={styles} />
-        )}
+        <FooterMenu menuItems={menuItems} styles={styles} />
       </div>
     );
   }
