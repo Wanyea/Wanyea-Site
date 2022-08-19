@@ -55,10 +55,10 @@ class App extends Component {
       { icon: `📧`, text: "Contact Me" },
     ];
 
-    // if (styles.showSidebar) {
-    //   menuItems.push({ icon: `😺️`, text: "Profile" });
-    //   menuItems.push({ icon: `⚙`, text: "Settings" });
-    // }
+    if (styles.showSidebar) {
+      menuItems.push({ icon: `😺️`, text: "Profile" });
+      menuItems.push({ icon: `⚙`, text: "Settings" });
+    }
 
     return (
       <div

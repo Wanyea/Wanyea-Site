@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "./Navbar";
-import App from "../App"; //Use menuItems key-value to change icon and text on bar. 
 
 const TopBar = ({ styles }) => {
   const topBarStyle = {
@@ -22,8 +21,8 @@ const TopBar = ({ styles }) => {
   return (
     <div style={topBarStyle}>
       <span> < Navbar /> </span>
-      Home
-      <span>{`🏠`}</span>
+      App
+      <span>{`⚙️`}</span>
     </div>
   );
 };

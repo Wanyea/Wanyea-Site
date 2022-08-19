@@ -25,15 +25,15 @@ const Sidebar = ({ menuItems, styles }) => {
   const logoStyle = {
     textAlign: "center",
     color: styles.white(),
-    fontSize: 28,
-    marginBottom: 40,
+    fontSize: 34,
+    marginBottom: 60,
     fontWeight: "bold"
   };
   
 
   return (
     <div style={sidebarStyle}>
-      <div style={logoStyle}>{styles.sidebarCollapsed ? "WB" : "Wanyea Barbel"}</div>
+      <div style={logoStyle}>{styles.sidebarCollapsed ? "p" : "Poop"}</div>
       {menuItems.map((item, i) => (
         <div key={i} style={menuItemStyle}>
           <span style={iconStyle}>{item.icon}</span>

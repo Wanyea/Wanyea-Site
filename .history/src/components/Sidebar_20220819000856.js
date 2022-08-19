@@ -19,7 +19,7 @@ const Sidebar = ({ menuItems, styles }) => {
 
   const iconStyle = {
     fontSize: 26,
-    marginRight: styles.sidebarCollapsed ? 0 : 10
+    marginRight: styles.sidebarCollapsed ? 5 : 10
   };
 
   const logoStyle = {

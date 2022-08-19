@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import TopBar from "./components/TopBar";
+import FooterMenu from "./components/FooterMenu";
 import Content from "./components/Content";
 import Sidebar from "./components/Sidebar";
-
+import Navbar from "./components/Navbar";
 
 class App extends Component {
   constructor(props) {
@@ -55,10 +56,10 @@ class App extends Component {
       { icon: `📧`, text: "Contact Me" },
     ];
 
-    // if (styles.showSidebar) {
-    //   menuItems.push({ icon: `😺️`, text: "Profile" });
-    //   menuItems.push({ icon: `⚙`, text: "Settings" });
-    // }
+    if (styles.showSidebar) {
+      menuItems.push({ icon: `😺️`, text: "Profile" });
+      menuItems.push({ icon: `⚙`, text: "Settings" });
+    }
 
     return (
       <div

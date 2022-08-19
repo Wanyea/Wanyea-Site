@@ -23,7 +23,7 @@ const TopBar = ({ styles }) => {
     <div style={topBarStyle}>
       <span> < Navbar /> </span>
       Home
-      <span>{`🏠`}</span>
+      <span>{`⚙️`}</span>
     </div>
   );
 };

@@ -1,5 +1,3 @@
-// NOTE: NO LONGER USED: REMOVE WHEN DROPDOWN IS COMPLETED. 
-
 import React from "react";
 
 const FooterMenu = ({ menuItems, styles }) => {

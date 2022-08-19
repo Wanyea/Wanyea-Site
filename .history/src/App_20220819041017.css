@@ -30,6 +30,8 @@
 
 /* Navbar */
 
+
+
 .menuNav {
   overflow-y: scroll;
   list-style: none;
@@ -61,8 +63,6 @@ a {
 .menuNav li:first-child {
   margin-top: 7rem;
 }
-
-/* End Navbar */
 
 @keyframes App-logo-spin {
   from {

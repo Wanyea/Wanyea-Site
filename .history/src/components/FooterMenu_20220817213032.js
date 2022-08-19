@@ -1,19 +1,9 @@
-// NOTE: NO LONGER USED: REMOVE WHEN DROPDOWN IS COMPLETED. 
-
 import React from "react";
 
 const FooterMenu = ({ menuItems, styles }) => {
   return (
     <div
-      style={{
-        display: "flex",
-        alignItems: "stretch",
-        width: "100%",
-        height: styles.footerMenuHeight,
-        backgroundColor: "#333",
-        color: "#000",
-        position: "fixed",
-        bottom: 0
+     
       }}
     >
       {menuItems.map((item, i) => {

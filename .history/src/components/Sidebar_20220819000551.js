@@ -26,7 +26,7 @@ const Sidebar = ({ menuItems, styles }) => {
     textAlign: "center",
     color: styles.white(),
     fontSize: 28,
-    marginBottom: 40,
+    marginBottom: 60,
     fontWeight: "bold"
   };
   
